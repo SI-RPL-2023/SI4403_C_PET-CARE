@@ -27,4 +27,4 @@ Kami merupakan Kelompok235/C yang berasal dari kelas SI-44-03, program studi S1 
 The repository is structured as follows:
 
 -   `main` is main branch of the repository and contains the latest stable version of the code.
--   `dev` is the development branch of the repository and contains the latest development version of the code.
+
