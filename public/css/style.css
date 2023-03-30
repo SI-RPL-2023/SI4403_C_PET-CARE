@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Cabin&family=Pangolin&family=Rubik&family=Solway&display=swap");
+
+* {
+    font-family: "Asul", sans-serif;
+}
+
+.login-register-card {
+    height: 39rem;
+}
+
+.home-container {
+    top: 20px;
+    left: 18px;
+}
+
+.home {
+    font-size: 25px;
+}
+
+.login {
+    background-image: url("../images/login.png");
+    background-size: cover;
+}
+
+.register {
+    background-image: url("../images/register.png");
+    background-size: cover;
+}
+
+.logo-login-register {
+    width: 50%;
+}
+
+.form {
+    width: 80%;
+}
+
+.link {
+    color: #124c5f;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #124c5f;
+    text-decoration: underline;
+}
+
+.button-primary {
+    background-color: #c7e7e1 !important;
+    color: #124c5f !important;
+}
+
+.button-primary:hover {
+    background-color: #aed4cc !important;
+}
+
+.button-secondary {
+    background-color: #124c5f !important;
+    color: white !important;
+}
+
+.button-secondary:hover {
+    background-color: #0f4050 !important;
+}
+
+.navbar-end {
+    margin-top: 15px;
+}
+
+.nav-link {
+    color: #212529 !important;
+}
+
+.active-link {
+    color: #ffaa00 !important;
+}
+
+.nav-link:hover {
+    color: #ffaa00 !important;
+}
+
+.dropdown-item:hover {
+    background-color: white !important;
+    color: #ffaa00 !important;
+}
+
+.logout:hover {
+    color: #dc3545 !important;
+}
+
+.nav-profile-picture {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.hero {
+    background-image: url("../images/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: 99vw 85vh;
+    margin-top: 90px;
+    height: 85vh;
+}
+
+.hero-title {
+    font-family: "Pangolin", cursive;
+    margin-top: -100px;
+    font-size: 55px;
+    letter-spacing: 2px;
+}
+
+.hero-img {
+    width: 95%;
+    margin-top: 60px;
+}
+
+.footer {
+    background-color: #f6faf9;
+}
+
+.footer-text {
+    font-family: "Pangolin", cursive;
+    letter-spacing: 1px;
+}
+
+.service {
+    height: 240px;
+}
+
+.service:nth-child(odd) {
+    border: 1px solid #98f2e1;
+}
+
+.service:nth-child(even) {
+    border: 1px solid #ffee94;
+    background-image: linear-gradient(#fffae0, white 60%);
+}
+
+.underline {
+    width: fit-content;
+}
+
+.foods-stuffs h2,
+.vet h2,
+.article h2,
+.article-title,
+.profile h2,
+.my-article h3,
+.my-order h2 {
+    font-family: "Pangolin", cursive !important;
+}
+
+.article-title {
+    min-height: 45px;
+}
+
+.article-img {
+    height: 335px !important;
+    width: 385px !important;
+    object-fit: cover;
+}
+
+.foods-stuffs h2::after,
+.vet h2::after,
+.article h2::after,
+.profile h2::after,
+.dashboard h3::after,
+.my-article h3:after,
+.my-order h2:after {
+    content: "";
+    height: 3px;
+    width: 70%;
+    background-color: #3a8da8;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+.card-body h5,
+.card-body span,
+.card-body h4 {
+    font-family: "Rubik", sans-serif;
+}
+
+.card-body {
+    height: 140px;
+}
+
+.card-img {
+    height: 304px;
+}
+
+.card-product-vet {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease;
+}
+
+.card-product-vet:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-desc-container {
+    height: 150px;
+    overflow: auto;
+}
+
+.product-img {
+    width: 80% !important;
+}
+
+.bag-btn {
+    background-color: #124c5f !important;
+    color: white !important;
+}
+
+.card-img-vet {
+    height: 60%;
+    background-color: #ffee94;
+    border-radius: 30px 30px 0 0;
+}
+
+.card-body span {
+    font-size: 16px;
+}
+
+.card-body h5 {
+    font-size: 16px;
+}
+
+.card-body h4 {
+    font-size: 18px;
+}
+
+.card-button {
+    right: 15px;
+    bottom: 15px;
+}
+
+.card-body-vet {
+    height: 40%;
+    background-color: #124c5f;
+}
+
+.card-body-vet h5 {
+    color: #ddca69;
+    font-family: "Rubik", sans-serif;
+}
+
+.bone {
+    color: #ddca69 !important;
+    margin: 10px 3px 10px 3px;
+}
+
+.article span,
+.article p {
+    font-family: "Rubik", sans-serif;
+}
+
+.not-added {
+    font-family: "Rubik", sans-serif;
+}
+
+.article-header-img {
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn-outline-light:hover {
+    color: #124c5f !important;
+}
+
+.spacing,
+.myappointment,
+.left-side-vet {
+    margin-top: 120px;
+}
+
+.edit {
+    width: 100%;
+    bottom: 0;
+}
+
+.profile-picture {
+    width: 340px !important;
+    height: 340px !important;
+    object-fit: cover;
+}
+
+.change-img {
+    width: 340px;
+    height: 340px;
+    line-height: 340px;
+}
+
+.change-img:hover {
+    cursor: pointer;
+    opacity: 50%;
+    transition: 0.2s;
+}
+
+.product-img-preview-container {
+    width: 340px;
+    min-height: 340px;
+    height: fit-content;
+    display: none;
+    margin-top: 31px;
+}
+
+.vet-img-preview {
+    width: 340px !important;
+    height: 340px !important;
+    object-fit: cover;
+}
+
+.dashboard h3 {
+    font-family: "Pangolin", cursive;
+}
+
+.dashboard h5,
+.dashboard h2,
+.dashboard h1,
+.dashboard h4 {
+    font-family: "Rubik", sans-serif;
+}
+
+.dashboard-title {
+    margin-top: 30px;
+}
+
+.dashboard-info {
+    width: 100%;
+    height: 200px;
+    background-color: #a0d6e7;
+}
+
+.dashboard-info-text {
+    width: 80%;
+    height: 50px;
+}
+
+.side-nav {
+    margin-top: 50px;
+}
+
+.admin-logout {
+    top: 530px;
+}
+
+.vetdashboard-container {
+    width: 100%;
+    height: 35rem;
+}
+
+.article-container,
+.appointment-container,
+.vet-profile-container {
+    height: 28rem;
+    overflow: auto;
+}
+
+.big-img {
+    width: 90%;
+    height: 450px !important;
+    object-fit: cover;
+}
+
+.article-container h4 {
+    font-family: "Rubik", sans-serif;
+}
+
+.create {
+    bottom: 25px;
+    right: 20px;
+}
+
+.appointment-profile-picture,
+.article-profile-picture {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+}
+
+.appointment-profile span {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+}
+
+.modal-body h5,
+.modal-body span,
+.modal-header h1 {
+    font-family: "Rubik", sans-serif;
+}
+
+.modal-product-img {
+    width: 90% !important;
+}
+
+.vet-id-card {
+    width: 100%;
+    height: 280px;
+}
+
+.vet-id-card .pp {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.vet-id-card h3 {
+    font-family: "Rubik", sans-serif;
+    color: #ddca69;
+}
+
+.vet-id-card span {
+    font-family: "Rubik", sans-serif;
+}
+
+table th,
+table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.profile-picture-text {
+    font-family: "Asul", sans-serif !important;
+}
+
+.cart {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.make-appointment-container-left * {
+    font-family: "Rubik", sans-serif;
+}
+
+.make-appointment-container-left,
+.make-appointment-container-right,
+.payment-container-left,
+.payment-container-right {
+    padding: 40px !important;
+    width: 95%;
+}
+
+.make-appointment-header {
+    background-color: #88a5af;
+    color: #124c5f;
+}
+
+.make-appointment-header img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.make-appointment-body h4 {
+    color: #124c5f;
+}
+
+.make-appointment-footer h4 {
+    color: #124c5f;
+}
+
+.radio-custom input[type="radio"] {
+    display: none;
+}
+
+.radio-custom label {
+    color: #124c5f;
+    border: 1px solid #124c5f;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 6px 12px;
+}
+
+.radio-custom input[type="radio"]:checked + label {
+    background-color: rgba(18, 76, 95, 0.5);
+}
+
+.payment-container-right h3 {
+    font-family: "Pangolin", cursive;
+}
+
+.order-summary * {
+    font-family: "Rubik", sans-serif;
+}
+
+.total-container {
+    background-color: rgba(18, 76, 95, 0.5);
+}
+
+.total-container * {
+    font-family: "Pangolin", cursive;
+}
+
+.list-product tr td {
+    padding: 15px 0;
+}
+
+.remove:hover {
+    color: #dc3545;
+    cursor: pointer;
+}
