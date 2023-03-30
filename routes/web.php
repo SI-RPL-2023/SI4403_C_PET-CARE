@@ -30,9 +30,24 @@ use App\Models\Appointment;
 |
 */
 
+Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
+
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/shop', [ShopController::class, 'index']);
+Route::get('/shop/cart', [ShopController::class, 'cart'])->middleware('pet_owner');
+Route::post('/shop/cart/{product}/add', [ShopController::class, 'store'])->middleware('auth')->middleware('pet_owner');
+Route::delete('/shop/cart/{cart}', [ShopController::class, 'destroy']);
+
+Route::get('/myprofile', [ProfileController::class, 'index'])->middleware('pet_owner');
+Route::get('/myprofile/edit', [ProfileController::class, 'edit'])->middleware('pet_owner');
+Route::put('/myprofile', [ProfileController::class, 'update']);
+
+Route::get('/articles', [ArticleController::class, 'index']);
+Route::get('/articles/{article:slug}', [ArticleController::class, 'show']);
