@@ -57,3 +57,7 @@ Route::post('/vet/make-appointment/{vet:vet_id}', [AppointmentController::class,
 Route::get('/vet/payment', [AppointmentController::class, 'paymentAppointment'])->middleware('pet_owner');
 Route::put('/vet/payment/{appointment}', [AppointmentController::class, 'update']);
 Route::get('/myappointment', [AppointmentController::class, 'myAppointment'])->middleware('pet_owner');
+
+Route::get('/payment', [PaymentController::class, 'index'])->middleware('pet_owner');
+Route::post('/payment', [PaymentController::class, 'productsPayment']);
+Route::get('/payment/invoice', [PaymentController::class, 'invoice'])->middleware('pet_owner');
