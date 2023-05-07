@@ -54,3 +54,6 @@ Route::get('/articles/{article:slug}', [ArticleController::class, 'show']);
 Route::get('/vet', [AppointmentController::class, 'index']);
 Route::get('/vet/make-appointment/{vet:vet_id}', [AppointmentController::class, 'makeAppointment'])->middleware('auth');
 Route::post('/vet/make-appointment/{vet:vet_id}', [AppointmentController::class, 'store']);
+Route::get('/vet/payment', [AppointmentController::class, 'paymentAppointment'])->middleware('pet_owner');
+Route::put('/vet/payment/{appointment}', [AppointmentController::class, 'update']);
+Route::get('/myappointment', [AppointmentController::class, 'myAppointment'])->middleware('pet_owner');
