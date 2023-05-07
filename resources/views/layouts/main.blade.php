@@ -20,7 +20,11 @@
   {{-- Navbar --}}
   <nav class="navbar navbar-expand-lg fixed-top bg-white">
     <div class="container pb-2">
+<<<<<<< HEAD
       <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="Logo" width="200px"></a>
+=======
+      <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="Logo" width="150px"></a>
+>>>>>>> booking_dokter
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
