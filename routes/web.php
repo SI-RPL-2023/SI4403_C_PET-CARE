@@ -50,3 +50,7 @@ Route::put('/myprofile', [ProfileController::class, 'update']);
 
 Route::get('/articles', [ArticleController::class, 'index']);
 Route::get('/articles/{article:slug}', [ArticleController::class, 'show']);
+
+Route::get('/vet', [AppointmentController::class, 'index']);
+Route::get('/vet/make-appointment/{vet:vet_id}', [AppointmentController::class, 'makeAppointment'])->middleware('auth');
+Route::post('/vet/make-appointment/{vet:vet_id}', [AppointmentController::class, 'store']);
