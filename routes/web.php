@@ -61,3 +61,10 @@ Route::get('/myappointment', [AppointmentController::class, 'myAppointment'])->m
 Route::get('/payment', [PaymentController::class, 'index'])->middleware('pet_owner');
 Route::post('/payment', [PaymentController::class, 'productsPayment']);
 Route::get('/payment/invoice', [PaymentController::class, 'invoice'])->middleware('pet_owner');
+
+Route::get('/myorder', [MyOrderController::class, 'index'])->middleware('pet_owner');
+Route::put('/myorder/{order}', [MyOrderController::class, 'update']);
+Route::get('/myorder/detail', [MyOrderController::class, 'show'])->middleware('pet_owner');
+
+Route::get('/myappointment', [AppointmentController::class, 'myAppointment'])->middleware('pet_owner');
+Route::put('/myappointment/{appointment}', [AppointmentController::class, 'updateAppointment']);
