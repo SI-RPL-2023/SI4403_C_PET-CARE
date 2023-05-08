@@ -69,3 +69,6 @@ Route::get('/myorder/detail', [MyOrderController::class, 'show'])->middleware('p
 
 Route::get('/myappointment', [AppointmentController::class, 'myAppointment'])->middleware('pet_owner');
 Route::put('/myappointment/{appointment}', [AppointmentController::class, 'updateAppointment']);
+
+Route::resource('/dashboard/products', AdminProductsController::class)->except('show')->middleware('admin');
+
