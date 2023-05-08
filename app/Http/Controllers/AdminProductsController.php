@@ -91,4 +91,54 @@ class AdminProductsController extends Controller
             'description' => $product->description
         ]);
     }
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Product $product)
+    {
+        $categories = Category::all();
+
+        return view('admin.products.edit', compact('product', 'categories'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Product $product)
+    {
+        $data = $request->validate([
+            'name' => 'required',
+            'category_id' => 'required',
+            'price' => 'required',
+            'stock' => 'integer',
+            'description' => 'required'
+        ]);
+
+        $price = explode('.', $request->price);
+        $data['price'] = join($price);
+
+        if($request->file('image')) {
+            Storage::delete('images/products/' . $product->image);
+
+            $image = explode('.', $request->file('image')->getClientOriginalName())[0];
+            $image = $image . '-' . time() . '.' . $request->file('image')->extension();
+            $request->file('image')->storeAs('images/products/', $image);
+
+            $data['image'] = $image;
+        };
+
+        $product->update($data);
+
+        return redirect('/dashboard/products')->with('success', 'Product has been updated');
+    }
+
 }
