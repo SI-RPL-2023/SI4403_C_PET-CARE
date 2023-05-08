@@ -72,3 +72,6 @@ Route::put('/myappointment/{appointment}', [AppointmentController::class, 'updat
 
 Route::resource('/dashboard/products', AdminProductsController::class)->except('show')->middleware('admin');
 
+Route::get('/dashboard/vets', [AdminVetsController::class, 'index'])->middleware('admin');
+Route::get('/dashboard/vets/create', [AdminVetsController::class, 'create'])->middleware('admin');
+Route::post('/dashboard/vets', [AdminVetsController::class, 'store']);
