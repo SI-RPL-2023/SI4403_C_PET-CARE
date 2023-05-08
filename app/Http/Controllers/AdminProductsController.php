@@ -92,6 +92,7 @@ class AdminProductsController extends Controller
         ]);
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -139,4 +140,5 @@ class AdminProductsController extends Controller
 
         return redirect('/dashboard/products')->with('success', 'Product has been updated');
     }
+
 }
