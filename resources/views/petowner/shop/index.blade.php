@@ -16,13 +16,16 @@
     </div>
     <div class="row g-4 mt-2">
       @if ($products->count())
-        @foreach ($products as $product)    
+        @foreach ($products as $product)
+          @if ($product->stock == 0)
+            @continue
+          @endif  
           <div class="col-3 mb-4">
             <div class="card card-product-vet card-product" data-bs-toggle="modal" data-bs-target="#productDetail">
-              <div class="d-flex justify-content-center align-items-center p-1 card-img">
-                <img src="{{ asset('storage/images/products/' . $product->image) }}" class="product-img" alt="..." />
+              <div class="d-flex p-1 card-img">
+                <img src="{{ asset('storage/images/products/' . $product->image) }}" class="product-img m-auto" alt="..." />
               </div>
-              <div class="card-body card-body-product d-flex align-items-center bg-light text-break rounded rounded-top-0">
+              <div class="card-body d-flex align-items-center bg-light text-break rounded rounded-top-0 mt-3">
                 <div>
                   <span class="text-muted product-category">{{ $product->category->name }}</span>
                   <h5 class="product-name">{{ $product->name }}{{ $product->weight == null ? '' : ' | ' . $product->weight }}</h5>
@@ -35,6 +38,9 @@
             </div>
           </div>
         @endforeach
+        <div class="col-12 d-flex justify-content-center mt-2">
+          <a href="/shop" class="btn button-secondary px-3 py-2 mt-3 rounded-1">Explore More</a>
+        </div>
       @else
         <div class="d-flex align-items-center justify-content-center" style="height: 400px">
           <h4 class="text-muted not-added">No product has been added</h4>
@@ -57,8 +63,10 @@
     const countCart = document.querySelector('.count-cart');
     const search = document.querySelector('.search');
 
-    if(countCart.textContent == 0) {
-      countCart.classList.add('d-none');
+    if(countCart != null) {
+      if(countCart.textContent == 0) {
+        countCart.classList.add('d-none');
+      }
     }
 
     products.forEach((product) => {

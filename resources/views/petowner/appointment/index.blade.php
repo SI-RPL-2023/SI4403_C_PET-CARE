@@ -30,7 +30,7 @@
         @endforeach
       @else
         <div class="d-flex align-items-center justify-content-center" style="height: 400px">
-          <h4 class="text-muted not-added">You haven't made an appointment</h4>
+          <h4 class="text-muted not-added">No vet has been added</h4>
         </div>
       @endif
     </div>

@@ -345,7 +345,8 @@
 }
 
 .admin-logout {
-    top: 530px;
+    bottom: 35px;
+    left: 35px;
 }
 
 .vetdashboard-container {

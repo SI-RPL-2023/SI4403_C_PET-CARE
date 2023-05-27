@@ -20,27 +20,27 @@
   <div class="container-fluid">
     <div class="row min-vh-100">
       {{-- Navbar Side --}}
-      <div class="col-2 border-3 border-end">
+      <div class="col-2 border-3 border-end position-relative">
         <div class="position-sticky top-0">
           <div class="text-center">
             <img class="mt-3" src="/images/logo.png" alt="Sobat Hewan" width="80%">
           </div>
-          <nav class="side-nav ms-4 position-relative">
+          <nav class="side-nav ms-4">
             <a class="nav-link mb-2 {{ Request::is('dashboard') ? 'active-link' : '' }}" href="/dashboard"><i class="fa-solid fa-house me-2"></i>Dashboard</a>
             <a class="nav-link mb-2 {{ Request::is('dashboard/products*') ? 'active-link' : '' }}" href="/dashboard/products"><i class="fa-solid fa-store me-2"></i>Products</a>
             <a class="nav-link mb-2 {{ Request::is('dashboard/orders*') ? 'active-link' : '' }}" href="/dashboard/orders"><i class="fa-solid fa-cash-register me-2"></i>Orders</a>
-            <div class="position-absolute admin-logout">
-              <form action="/logout" method="post">
-                @csrf
-                <button type="submit" class="btn btn-outline-danger border-1"><i class="fa-solid fa-right-from-bracket me-2"></i>Log Out</button>
-              </form>
-            </div>
             @can('super-admin')
-              <h6 class="mt-4 mb-2 text-muted">Administrator</h6>
-              <a class="nav-link mb-2 {{ Request::is('dashboard/petowners*') ? 'active-link' : '' }}" href="/dashboard/petowners"><i class="fa-solid fa-user me-2"></i>Pet Owners</a>
-              <a class="nav-link mb-2 {{ Request::is('dashboard/vets*') ? 'active-link' : '' }}" href="/dashboard/vets"><i class="fa-solid fa-user-doctor me-2"></i>Vets</a>
+            <h6 class="mt-4 mb-2 text-muted">Administrator</h6>
+            <a class="nav-link mb-2 {{ Request::is('dashboard/petowners*') ? 'active-link' : '' }}" href="/dashboard/petowners"><i class="fa-solid fa-user me-2"></i>Pet Owners</a>
+            <a class="nav-link mb-2 {{ Request::is('dashboard/vets*') ? 'active-link' : '' }}" href="/dashboard/vets"><i class="fa-solid fa-user-doctor me-2"></i>Vets</a>
             @endcan
           </nav>
+        </div>
+        <div class="position-absolute admin-logout">
+          <form action="/logout" method="post">
+            @csrf
+            <button type="submit" class="btn btn-outline-danger border-1"><i class="fa-solid fa-right-from-bracket me-2"></i>Log Out</button>
+          </form>
         </div>
       </div>
 

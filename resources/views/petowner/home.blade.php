@@ -69,7 +69,10 @@
     </div>
     <div class="row g-4 mt-3">
       @if ($newProducts->count())
-        @foreach ($newProducts as $product)    
+        @foreach ($newProducts as $product)
+          @if ($product->stock == 0)
+            @continue
+          @endif  
           <div class="col-3 mb-4">
             <div class="card card-product-vet card-product" data-bs-toggle="modal" data-bs-target="#productDetail">
               <div class="d-flex p-1 card-img">
