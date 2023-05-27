@@ -54,6 +54,7 @@ class AdminVetsController extends Controller
 
         return redirect('/dashboard/vets')->with('success', 'New vet has been added');
     }
+<<<<<<< HEAD
 
     public function destroy(Vet $vet) {
         Storage::delete('images/vets/' . $vet->image);
@@ -61,4 +62,6 @@ class AdminVetsController extends Controller
 
         return redirect('/dashboard/vets')->with('success', 'Vet has been deleted');
     }
+=======
+>>>>>>> 54f19f78e58dff5f1dde72c7ec37214ee5fd2dce
 }
