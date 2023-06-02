@@ -92,10 +92,6 @@ class AdminProductsController extends Controller
         ]);
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 54f19f78e58dff5f1dde72c7ec37214ee5fd2dce
     /**
      * Show the form for editing the specified resource.
      *
@@ -144,7 +140,6 @@ class AdminProductsController extends Controller
         return redirect('/dashboard/products')->with('success', 'Product has been updated');
     }
 
-<<<<<<< HEAD
     /**
      * Remove the specified resource from storage.
      *
@@ -158,6 +153,3 @@ class AdminProductsController extends Controller
 
         return redirect('/dashboard/products')->with('success', 'Product has been deleted');
     }
-=======
->>>>>>> 54f19f78e58dff5f1dde72c7ec37214ee5fd2dce
-}
